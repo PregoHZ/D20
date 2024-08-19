@@ -1,0 +1,46 @@
+'''
+1. Quais são os dados de entrada necessários?
+a. armadura do boss
+b. valor aleatorio no d20
+
+2. O que devo fazer come estes dados?
+a. comparar o valor da armadura do boss com o valor do d20
+
+3. Quais são as restrições deste problema?
+a. ambos precisam ser int
+
+4. Qual é o resultado esperado?
+a. informar se o d20 acertou ou não o boss
+
+5. Qual é a sequência de passos a ser feita parachegar ao resultado esperado?
+a. importar o modulo random
+b. informar a armadura do boss
+c. gerar um valor d20
+d. comparar os valores com condicionais
+e. informar se acertou ou não o boss
+'''
+
+import random
+
+boss_armor = 18
+
+player_add_hit = 5
+
+dado = random.randint(1, 20) + player_add_hit
+
+print('='* 50)
+
+print(f'Valor do D20: {dado}')
+
+print('='* 50)
+
+if dado >= boss_armor:
+    print(f'Valor do D20 = {dado}')
+    print('Valor maior que a armadura')
+    print('Hit!')
+    print('='* 50)
+else:
+    print(f'Valor do D20 = {dado}')
+    print('Valor menor que a armadura')
+    print('Miss!')
+    print('='* 50)
